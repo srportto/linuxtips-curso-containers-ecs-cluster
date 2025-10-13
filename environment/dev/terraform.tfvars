@@ -23,3 +23,9 @@ nodes_ami          = "ami-0efb059385a6bb760" # Amazon Linux 2 ECS Optimized AMI 
 node_instance_type = "t3.micro"
 node_volume_size   = 50    # em GB
 node_volume_type   = "gp2" # gp2, gp3, io1, st1, sc1, standard
+
+cluster_on_demand_min_size = 2
+
+cluster_on_demand_max_size = 4
+
+cluster_on_demand_desired_size = 3
