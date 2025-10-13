@@ -17,3 +17,9 @@ ssm_private_subnet_3 = "/linuxtips-vpc/vpc/subnet_private_1c"
 load_balancer_internal = false
 load_balancer_type     = "application"
 
+
+### ECS geral configs ###
+nodes_ami          = "ami-0efb059385a6bb760" # Amazon Linux 2 ECS Optimized AMI (HVM), SSD Volume Type - us-west-2
+node_instance_type = "t3.micro"
+node_volume_size   = 50    # em GB
+node_volume_type   = "gp2" # gp2, gp3, io1, st1, sc1, standard

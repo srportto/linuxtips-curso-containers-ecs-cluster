@@ -19,3 +19,11 @@ variable "ssm_private_subnet_3" {}
 variable "load_balancer_internal" {}
 variable "load_balancer_type" {}
 
+### ECS geral configs ###
+variable "nodes_ami" {}
+
+variable "node_instance_type" {}
+
+variable "node_volume_size" {}
+
+variable "node_volume_type" {}
