@@ -1,9 +1,16 @@
-resource "aws_launch_template" "on_demand" {
-  name_prefix   = format("%s-on-demand-", var.project_name)
+resource "aws_launch_template" "spots" {
+  name_prefix   = format("%s-spots-", var.project_name)
   image_id      = var.nodes_ami
   instance_type = var.node_instance_type
 
   vpc_security_group_ids = [aws_security_group.main.id]
+
+  instance_market_options {
+    market_type = "spot"
+    spot_options {
+      max_price = "0.05"
+    }
+  }
 
   iam_instance_profile {
     ##name = "ecsInstanceRole" ## perfil padrao do ECS que da permissoes para o agente do ECS se comunicar com o cluster ECS

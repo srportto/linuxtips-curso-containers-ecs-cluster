@@ -24,8 +24,10 @@ node_instance_type = "t3.micro"
 node_volume_size   = 50    # em GB
 node_volume_type   = "gp2" # gp2, gp3, io1, st1, sc1, standard
 
-cluster_on_demand_min_size = 2
-
-cluster_on_demand_max_size = 4
-
+cluster_on_demand_min_size     = 2
+cluster_on_demand_max_size     = 4
 cluster_on_demand_desired_size = 3
+
+cluster_spot_min_size     = 2
+cluster_spot_max_size     = 4
+cluster_spot_desired_size = 3
